@@ -38,19 +38,35 @@ end
 private
 
 def list_garments
-  puts "Garments in the closet!"
+  puts "\n"
+  puts "Garments in the closet!:"
+  puts "\n"
   @outfits.each do |outfits|
    puts outfits
   end
 end
 
 def add_garment
+  puts "\n"
   puts "What color is the garment?"
   color = gets.chomp
+  puts "\n"
   puts "What kind of garment is this?"
   garment = gets.chomp
   @outfits << Outfits.new(color,garment)
+  puts "\n"
   puts "Garment has been added!"
 end
 
-
+def remove_garment
+  puts "\n"
+  puts " What is the oufit you want to wear today? Example: blue top"
+  outfits = gets.chomp
+  outfit = @outfits.find { |outfit| if outfit.to_s.downcase == outfits
+  @outfits.delete(outfit)
+end
+}
+  puts "\n"
+  puts "You look amazing!"
+  
+end

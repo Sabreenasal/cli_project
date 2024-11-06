@@ -1,14 +1,14 @@
 class Outfits
-  attr_accessor :garment, :color
+  attr_accessor :color, :garment
 
-  def initialize(garment,color)
+  def initialize(color, garment)
     @color = color
     @garment = garment
    
   end
 
   def to_s
-   "#{@color}, #{@garment}"
+   "#{@color} #{@garment}"
   end
 
 end

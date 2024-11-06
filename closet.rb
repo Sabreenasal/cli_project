@@ -8,6 +8,7 @@ class Closet
 
  def run
   loop do
+  
    puts "\n"
    puts "Welcome to your closet!"
    puts "1. List all garments"
@@ -17,6 +18,7 @@ class Closet
    print "Choose an option:"
    puts "\n"
    option = gets.chomp.to_i
+
   
    case option 
     when 1
@@ -26,12 +28,15 @@ class Closet
     when 3
       add_garment
     when 4 
+      puts "\n"
       puts "See ya later!"
-    break 
-  else
-    puts "Invalid option. Choose another option."
+    exit 
+    else
+    puts "\n"
+    puts "Invalid option. Please choose another option."
+  run
   end 
- end
+  end
 end
 end
 
@@ -44,6 +49,11 @@ def list_garments
   @outfits.each do |outfits|
    puts outfits
   end
+if
+  @outfits.empty? 
+  puts "The closet is empty. Please add a garment or exit."
+end
+
 end
 
 def add_garment
@@ -64,9 +74,19 @@ def remove_garment
   outfits = gets.chomp
   outfit = @outfits.find { |outfit| if outfit.to_s.downcase == outfits
   @outfits.delete(outfit)
-end
-}
+  end}
   puts "\n"
   puts "You look amazing!"
+  puts "\n"
+if
+  @outfits.empty? 
+  puts "The closet is empty. Please add a garment or exit."
+  elsif 
+    @outfits == 
+    puts "That isn't in the closet. Please type something from the list "
+  
+  
+end
+
   
 end

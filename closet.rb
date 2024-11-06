@@ -8,7 +8,6 @@ class Closet
 
  def run
   loop do
-  
    puts "\n"
    puts "Welcome to your closet!"
    puts "1. List all garments"
@@ -82,11 +81,7 @@ if
   @outfits.empty? 
   puts "The closet is empty. Please add a garment or exit."
   elsif 
-    @outfits == 
-    puts "That isn't in the closet. Please type something from the list "
-  
-  
+  @outfits == 
+  puts "That isn't in the closet. Please type something from the list "
 end
-
-  
 end

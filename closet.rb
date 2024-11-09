@@ -42,16 +42,16 @@ end
 private
 
 def list_garments
-  puts "\n"
-  puts "Garments in the closet!:"
-  puts "\n"
-  @outfits.each do |outfits|
+   puts "\n"
+   puts "Garments in the closet!:"
+   puts "\n"
+   @outfits.each do |outfits|
    puts outfits
   end
-if
-  @outfits.empty? 
-  puts "The closet is empty. Please add a garment or exit."
-end
+  if
+   @outfits.empty? 
+   puts "The closet is empty. Please add a garment or exit."
+  end
 
 end
 
@@ -68,20 +68,22 @@ def add_garment
 end
 
 def remove_garment
+  if
+    @outfits.empty? 
+    puts "The closet is empty. Please add a garment or exit."
+    run
+  end
   puts "\n"
   puts " What is the oufit you want to wear today? Example: blue top"
   outfits = gets.chomp
   outfit = @outfits.find { |outfit| if outfit.to_s.downcase == outfits
   @outfits.delete(outfit)
   end}
+if outfits != outfit
+  puts "\n"
+  puts "That isn't in the closet. Please type something from the list "
+ remove_garment
+end
   puts "\n"
   puts "You look amazing!"
-  puts "\n"
-if
-  @outfits.empty? 
-  puts "The closet is empty. Please add a garment or exit."
-  elsif 
-  @outfits == 
-  puts "That isn't in the closet. Please type something from the list "
-end
 end

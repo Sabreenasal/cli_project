@@ -1,5 +1,7 @@
-# ruby-cli-template
+# closet-cli
 
-Use this repository as a template for your Ruby CLI (command line interface) project.
+Gives user a closet to add and remove garments.
+## Instruction
 
+Run ruby app.rb in the terminal
 - Ruby version: `3.2.1`
